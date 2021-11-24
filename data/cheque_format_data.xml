@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="standerd_cheque_format" model="dynamic.cheque">
+            <field name="name">Standard Cheque</field>
+            <field name="cheque_hight"> 75 </field>
+            <field name="cheque_width"> 180 </field>
+            <field name="ac_pay"> True </field>
+            <field name="ac_top_margin"> 20 </field>
+            <field name="ac_left_margin"> 40 </field>
+            <field name="ac_font_size"> 22 </field>
+            <field name="top_margin"> 100 </field>
+            <field name="left_margin"> 600 </field>
+            <field name="font_size"> 24 </field>
+            <field name="char_spacing"> 12 </field>
+            <field name="payee_top_margin"> 20 </field>
+            <field name="payee_left_margin"> 40 </field>
+            <field name="payee_width"> 30 </field>
+            <field name="payee_font_size"> 22 </field>
+            <field name="af_top_margin"> 10 </field>
+            <field name="af_left_margin"> 10 </field>
+            <field name="af_width"> 20 </field>
+            <field name="af_font_size"> 18 </field>
+            <field name="af_currency_symbol"> True </field>
+            <field name="fl_top_margin"> 20 </field>
+            <field name="fl_left_margin"> 40 </field>
+            <field name="fl_width"> 20 </field>
+            <field name="words_in_fl_line"> 35 </field>
+            <field name="sc_top_margin"> 20 </field>
+            <field name="sc_left_margin"> 40 </field>
+            <field name="sc_width"> 00 </field>
+            <field name="words_in_sc_line"> 60 </field>
+            <field name="sc_font_size"> 18 </field>
+            <field name="sc_currency_name"> True </field>
+            <field name="comapny_name"> True </field>
+            <field name="comp_font_size"> 24 </field>
+            <field name="comp_top_margin"> 20 </field>
+            <field name="comp_left_margin"> 40 </field>
+            <field name="sb_width"> 100 </field>
+            <field name="sb_hight"> 30 </field>
+            <field name="sb_top_margin"> 20 </field>
+            <field name="sb_left_margin"> 20 </field>
+        </record>
+
+    </data>
+</odoo>
