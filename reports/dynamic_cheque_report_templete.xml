@@ -5,6 +5,7 @@
 
 			<div class="">
 				<div class="">
+					<div class="" style="font-size:10px; font-weight:bold; margin-left:40px;">PARA ABONO EN CUENTA DEL BENEFICIARIO</div>
 					<div class="divTableRow" t-att-style="'margin-top:'+ str(cheque_format.ac_top_margin) + 'px;'">
 						<div>  
 							<t t-if="cheque_format.ac_pay == True">
@@ -13,13 +14,25 @@
 						</div>
 					</div>
 					<div class="divTableRow" t-att-style="'margin-top:'+ str(cheque_format.top_margin) + 'px;'">
-						<span t-esc="payment_id.date.strftime('%d%m%Y')" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.font_size) + 'px;' + 'margin-top:' + str(cheque_format.top_margin) + 'px;'+'margin-left:' + str(cheque_format.left_margin) + 'px;'+'letter-spacing:' + str(cheque_format.char_spacing) + 'px;'"/>
+						<span t-esc="payment_id.date.strftime('%d de %B de %Y')" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.font_size) + 'px;' + 'margin-top:' + str(cheque_format.top_margin) + 'px;'+'margin-left:' + str(cheque_format.left_margin) + 'px;'+'letter-spacing:' + str(cheque_format.char_spacing) + 'px;'"/>
 					</div>
-					<div class="divTableRow" t-att-style="'margin-top:'+ str(cheque_format.payee_top_margin) + 'px;'">
+					<div class="row" style="margin-top:20px">
+						<div class="" style="display:inline-block; width:40%;"><span t-esc="payment_id.partner_id.name" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.payee_font_size) + 'px;'+'margin-top:' + str(cheque_format.payee_top_margin) + 'px;'+'margin-left:' + str(cheque_format.payee_left_margin) + 'px;'+'width:' + str(cheque_format.payee_width) + 'px;'"/></div>
+						<div class="" style="display:inline-block; width:40%; text-align:center;">							
+						<div class="col-2" style="margin-right:10px;margin-top:5px">
+								<t t-if="cheque_format.af_currency_symbol == True and cheque_format.af_currency_symbol_position == 'before'">
+								<span t-esc="payment_id.partner_id.company_id.currency_id.symbol" /></t>
+								<span t-esc="'{:,.2f}'.format(payment_id.amount)" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.af_font_size) + 'px;'+'margin-top:' + str(cheque_format.af_top_margin) + 'px;'+'margin-left:' + str(cheque_format.af_left_margin) + 'px;'+'width:' + str(cheque_format.af_width) + 'px;'"/>
+								<t t-if="cheque_format.af_currency_symbol == True and cheque_format.af_currency_symbol_position == 'after'"> 
+								&#160;&#160;<span t-esc="payment_id.partner_id.company_id.currency_id.symbol" /> </t>
+							</div>
+							</div>
+					</div>
+					<!--<div class="divTableRow" t-att-style="'margin-top:'+ str(cheque_format.payee_top_margin) + 'px;'">
 						<div>  
 							<span t-esc="payment_id.partner_id.name" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.payee_font_size) + 'px;'+'margin-top:' + str(cheque_format.payee_top_margin) + 'px;'+'margin-left:' + str(cheque_format.payee_left_margin) + 'px;'+'width:' + str(cheque_format.payee_width) + 'px;'"/>
 						</div>
-					</div>
+					</div>-->
 					<div class="divTableRow">
 						<div class="divTableCell" t-att-style="'margin-top:'+ str(cheque_format.fl_top_margin) + 'px;'">
 							<div style="width: 80%;float:left;">
@@ -41,13 +54,13 @@
 								</t>
 							</div>
 
-							<div class="col-2" style="margin-right:10px;margin-top:5px">
+							<!--<div class="col-2" style="margin-right:10px;margin-top:5px">
 								<t t-if="cheque_format.af_currency_symbol == True and cheque_format.af_currency_symbol_position == 'before'">
 								<span t-esc="payment_id.partner_id.company_id.currency_id.symbol" /></t>
 								<span t-esc="'{:,.2f}'.format(payment_id.amount)" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.af_font_size) + 'px;'+'margin-top:' + str(cheque_format.af_top_margin) + 'px;'+'margin-left:' + str(cheque_format.af_left_margin) + 'px;'+'width:' + str(cheque_format.af_width) + 'px;'"/>
 								<t t-if="cheque_format.af_currency_symbol == True and cheque_format.af_currency_symbol_position == 'after'"> 
 								&#160;&#160;<span t-esc="payment_id.partner_id.company_id.currency_id.symbol" /> </t>
-							</div>
+							</div>-->
 						</div><br/>
 					</div>
 					<div class="divTableRow">
