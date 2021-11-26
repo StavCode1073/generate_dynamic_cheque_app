@@ -99,7 +99,7 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-		 <menuitem name="Dynamic Cheque"
+		 <menuitem name="Cheque dinámico"
 			id="dynamic_cheque_config_menu"
 			parent = "account.menu_finance_configuration"
 			action="action_dynamic_cheque_print"
@@ -112,7 +112,7 @@
 			<field name="inherit_id" ref="account.view_account_payment_form" />
 			<field name="arch" type="xml">
 				<header>
-						<button name="%(action_dynamic_cheque_print_wizard)d" string="Print Dynamic Cheque" type="action" class="btn-primary" attrs="{'invisible': [('payment_type', '!=', 'outbound')]}"/>
+						<button name="%(action_dynamic_cheque_print_wizard)d" string="Imprime cheque dinámico" type="action" class="btn-primary" attrs="{'invisible': [('payment_type', '!=', 'outbound')]}"/>
 				</header>
 			</field>
 		</record>

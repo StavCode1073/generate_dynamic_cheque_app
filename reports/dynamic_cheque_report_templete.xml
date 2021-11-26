@@ -40,7 +40,7 @@
 									<span  t-esc="payment_id.partner_id.company_id.currency_id.name" t-att-style=" 'font-weight: bold;' + 'margin-top:' + str(cheque_format.fl_top_margin) + 'px;'+'margin-left:' + str(cheque_format.fl_left_margin) + 'px;'"/> 
 								</t>
 								<span t-if="get_amount_in_word_line(payment_id,cheque_format)">
-									<span t-esc="get_amount_in_word_line(payment_id,cheque_format)['first_line'] or ''"  	t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.sc_font_size) + 'px;'+'margin-top:' + str(cheque_format.fl_top_margin) + 'px;'+ 'px;'+'width:' + str(cheque_format.fl_width) + 'px;'+'margin-left:' + str(cheque_format.fl_left_margin) + 'px;'"/> <strong> Only.</strong><br/>
+									<span t-esc="get_amount_in_word_line(payment_id,cheque_format)['first_line'] or ''"  	t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.sc_font_size) + 'px;'+'margin-top:' + str(cheque_format.fl_top_margin) + 'px;'+ 'px;'+'width:' + str(cheque_format.fl_width) + 'px;'+'margin-left:' + str(cheque_format.fl_left_margin) + 'px;'"/> <strong> </strong><br/>
 									
 									<t t-if="get_amount_in_word_line(payment_id,cheque_format)['second_line']">
 										<span t-esc="get_amount_in_word_line(payment_id,cheque_format)['second_line']" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.sc_font_size) + 'px;'+'margin-top:' + str(cheque_format.sc_top_margin) + 'px;'+'margin-left:' + str(cheque_format.sc_left_margin) + 'px;'+'width:' + str(cheque_format.sc_width) + 'px;'" />
