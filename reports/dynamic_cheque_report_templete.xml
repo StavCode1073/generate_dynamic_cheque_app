@@ -14,7 +14,7 @@
 						</div>
 					</div>
 					<div class="divTableRow" t-att-style="'margin-top:'+ str(cheque_format.top_margin) + 'px;'">
-						<span t-esc="payment_id.date.strftime('%d de %B de %Y')" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.font_size) + 'px;' + 'margin-top:' + str(cheque_format.top_margin) + 'px;'+'margin-left:' + str(cheque_format.left_margin) + 'px;'+'letter-spacing:' + str(cheque_format.char_spacing) + 'px;'"/>
+						<span t-esc="payment_id.date.strftime('%d/%m/%Y')" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.font_size) + 'px;' + 'margin-top:' + str(cheque_format.top_margin) + 'px;'+'margin-left:' + str(cheque_format.left_margin) + 'px;'+'letter-spacing:' + str(cheque_format.char_spacing) + 'px;'"/>
 					</div>
 					<div class="row" style="margin-top:20px">
 						<div class="" style="display:inline-block; width:40%;"><span t-esc="payment_id.partner_id.name" t-att-style="'font-weight: bold;' + 'font-size:' + str(cheque_format.payee_font_size) + 'px;'+'margin-top:' + str(cheque_format.payee_top_margin) + 'px;'+'margin-left:' + str(cheque_format.payee_left_margin) + 'px;'+'width:' + str(cheque_format.payee_width) + 'px;'"/></div>
